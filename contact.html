@@ -2,331 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700& display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: rgb(1, 1, 69);
-            color: white;
-            font-size: 'Poppins', sans-serif;
-        }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 40px;
-            background-color: rgb(236, 244, 168);
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        nav ul li a:hover {
-            color: rgb(234, 64, 48);
-            font-size: 1.2rem;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 80px 0;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            font-size: 1.5rem;
-            margin: 70px 0;
-        }
-        .leftSection .buttons{
-            padding: 50px 0;
-        }
-        .leftSection .btn{
-            padding:12px;
-            background:#1e2167;
-            color: wheat;
-            border: 2px solid wheat;
-            border-radius: 6px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .rightSection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
-        .purple {
-            color: blueviolet;
-        }
-
-        #element {
-            color: rgb(225, 196, 252);
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .hr {
-            border: 0;
-            background: rgb(172, 163, 246);
-            height: 1px;
-        }
-
-        main hr {
-            border: 0;
-            background: rgb(172, 163, 246);
-            height: 2px;
-            margin: 40px 84px;
-        }
-
-        .text-gray {
-            color: gray;
-        }
-
-        .secondSection h1 {
-            font-size: 1.9rem;
-        }
-
-        .thirdSection h1{
-            font-size: 1.9rem;
-        }
-        .thirdSection .box{
-            background: white;
-            width: 80vw;
-            height: 3px;
-            margin: 50px 0;
-            display: flex;
-        }
-
-        .secondSection .box {
-            background: white;
-            width: 80vw;
-            height: 3px;
-            margin: 50px 0;
-            display: flex;
-        }
-
-
-        .secondSection .vertical {
-            height: 25px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-        }
-        .thirdSection .vertical{
-            height: 25px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-        }
-        
-        .image-top {
-            width: 40px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-        .image-top_2 {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .vertical-tittle {
-            position: relative;
-            top:15px;
-            width: 250px;
-            font-size: 14px;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top:20px;
-            color: gray;
-            width: 200px;
-            font-size: 16px;
-
-        }
-        footer{
-            background-color: rgb(5, 8, 12);
-        }
-        .footer{
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-        }
-        .footer ul{
-            list-style: none;
-        }
-        .footer > div{
-            width: 223px;
-        }
-        footer .footer-rights{
-            text-align: center;
-            color: gray;
-            padding: 12px 0;
-        }
-
-        @media (max-width: 900px) {
-    .firstSection,
-    .secondSection,
-    .thirdSection {
-        max-width: 98vw;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-    .firstSection > div,
-    .secondSection > div,
-    .thirdSection > div {
-        width: 100% !important;
-    }
-    .firstSection {
-        margin: 18px 0;
-    }
-    .thirdSection {
-        padding-top: 18px;
-    }
-    .secondSection .box,
-    .thirdSection .box {
-        width: 98vw;
-        margin: 24px 0;
-    }
-}
-@media (max-width: 700px) {
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 8px 0;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 8px;
-    }
-    nav ul li {
-        margin: 8px 0;
-    }
-    .firstSection {
-        padding: 0 4px;
-    }
-    .firstSection > div,
-    .secondSection > div,
-    .thirdSection > div {
-        width: 100% !important;
-    }
-    .firstSection .buttons,
-    .buttons {
-        flex-direction: column !important;
-        gap: 10px !important;
-        align-items: stretch;
-    }
-    .firstSection img,
-    .secondSection img,
-    .thirdSection img,
-    img {
-        width: 90px !important;
-        height: 90px !important;
-        margin: 0 auto;
-        display: block;
-    }
-    [style*="display: grid;"] {
-        grid-template-columns: 1fr !important;
-        gap: 18px !important;
-    }
-    .vertical-tittle, .vertical-desc {
-        width: 100% !important;
-        text-align: left;
-    }
-    .footer {
-        flex-direction: column;
-        padding: 18px 8px;
-        align-items: center;
-    }
-    .footer > div {
-        width: 100% !important;
-        margin-bottom: 12px;
-    }
-}
-@media (max-width: 480px) {
-    body {
-        font-size: 15px;
-    }
-    h1, h2, h3 {
-        font-size: 1.1em !important;
-    }
-    .firstSection, .secondSection, .thirdSection {
-        padding: 0 2px;
-    }
-    .profile-btn, .btn {
-        padding: 8px 10px !important;
-        font-size: 0.95rem !important;
-    }
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Dr. Krishnandu Hazra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left" style="color: black;"><strong>Dr. Krishnandu Hazra</strong> </div>
-            <div class="right"></div>
-            <ul>
-                <li><a href="index.html"><strong>Home</strong></a></li>
-                <li><a href="research.html"><strong>Research</strong></a></li>
-                <li><a href="research_groups.html"><strong>Research Groups</strong></a></li>
-                <li><a href="publications.html"><strong>Publications</strong></a></li>
-                <li><a href="contact.html"><strong>Contact Me</strong></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-          <section class="firstSection" style="flex-direction: column; align-items: center; justify-content: center; min-height: 60vh;">
-            <h1 style="font-size:2.5rem; color:#b49f05; margin-bottom: 32px; letter-spacing: 2px;">Contact</h1>
-            <div style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 32px 40px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 700px; text-align: center;">
-                <div style="margin-bottom: 24px;">
-                    <span style="font-weight:600; color:#b49f05; font-size:1.1rem;">Office Address:</span><br>
-                    <span style="color: #fff; font-size:1rem;">Department of Computer Science and Engineering, Cabin : 214, Indian Institute of Information Technology Guwahati, NH37, Bongora, Assam, 781015</span>
-                </div>
-                <div>
-                    <span style="font-weight:600; color:#b49f05; font-size:1.1rem;">Email ID:</span><br>
-                    <a href="mailto:krishnandu@iiitg.ac.in" style="color:#fff; text-decoration:underline; font-size:1rem;">krishnandu@iiitg.ac.in</a>
-                </div>
-            </div>
-        </section>
-    </main>
+  <header>
+    <nav class="site-nav">
+      <div class="nav-brand">Dr. Krishnandu Hazra</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="research_groups.html">Research Groups</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1 class="section-heading" style="font-size:clamp(1.8rem,5vw,2.6rem); margin-bottom:32px; letter-spacing:2px;">
+        Contact
+      </h1>
+
+      <div class="contact-card">
+        <div class="contact-block">
+          <p class="contact-label">Office Address:</p>
+          <p>
+            Department of Computer Science and Engineering, Cabin: 214,<br>
+            Indian Institute of Information Technology Guwahati,<br>
+            NH37, Bongora, Assam – 781015
+          </p>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-label">Email ID:</p>
+          <a href="mailto:krishnandu@iiitg.ac.in">krishnandu@iiitg.ac.in</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Copyright &copy; www.krishandu.com | All rights reserved.
+  </footer>
 
 </body>
-
 </html>

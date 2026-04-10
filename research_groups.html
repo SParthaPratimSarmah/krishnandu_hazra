@@ -2,675 +2,195 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rsearch Groups</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700& display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: rgb(1, 1, 69);
-            color: white;
-            font-size: 'Poppins', sans-serif;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 40px;
-            background-color: rgb(236, 244, 168);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        button a {
-            text-decoration: none;
-            color: #b49f05;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        nav ul li a:hover {
-            color: rgb(234, 64, 48);
-            font-size: 1.2rem;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 30px 0;
-            height: 50vb;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            font-size: 1.5rem;
-            margin: 70px 0;
-        }
-
-        .leftSection .buttons {
-            padding: 50px 0;
-            display: flex;
-            gap: 18px;
-            margin: 16px 0 0 0;
-        }
-
-        .leftSection .btn {
-            padding: 12px;
-            background: #1e2167;
-            color: wheat;
-            border: 2px solid wheat;
-            border-radius: 6px;
-            font-size: 20px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .leftSection .btn:hover {
-            transform: scale(1.08);
-            box-shadow: 0 4px 12px rgba(180, 159, 5, 0.2);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .leftSection .btn:active {
-            transform: scale(0.98);
-        }
-
-        .buttons .btn {
-            background: linear-gradient(90deg, #b49f05 0%, #e6e1b4 100%);
-            color: #1e2167;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none !important;
-            box-shadow: 0 2px 8px rgba(180, 159, 5, 0.1);
-            transition: transform 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s;
-            outline: none;
-            display: inline-block;
-        }
-
-        .buttons .btn:hover,
-        .buttons .btn:focus {
-            transform: scale(1.1);
-            background: linear-gradient(90deg, #e6e1b4 0%, #b49f05 100%);
-            color: #1e2167;
-            box-shadow: 0 6px 18px rgba(180, 159, 5, 0.18);
-            text-decoration: none !important;
-        }
-
-        .buttons .btn:active {
-            transform: scale(0.97);
-        }
-
-        .rightSection img {
-            width: 80%;
-            margin: 50px 0;
-        }
-
-        .purple {
-            color: blueviolet;
-        }
-
-        #element {
-            color: rgb(225, 196, 252);
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 0;
-        }
-
-        .thirdSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 50px;
-        }
-
-        .hr {
-            border: 0;
-            background: rgb(172, 163, 246);
-            height: 1px;
-        }
-
-        main hr {
-            border: 0;
-            background: rgb(172, 163, 246);
-            height: 2px;
-            margin: 40px 84px;
-        }
-
-        .text-gray {
-            color: gray;
-        }
-
-        .secondSection h1 {
-            font-size: 1.9rem;
-        }
-
-        .thirdSection h1 {
-            font-size: 1.9rem;
-        }
-
-        .thirdSection .box {
-            background: white;
-            width: 50vw;
-            height: 3px;
-            margin: 50px 0;
-            display: flex;
-        }
-
-        .secondSection .box {
-            background: white;
-            width: 80vw;
-            height: 3px;
-            margin: 50px 0;
-            display: flex;
-        }
-
-
-        .secondSection .vertical {
-            height: 25px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-        }
-
-        .thirdSection .vertical {
-            height: 25px;
-            width: 1px;
-            background-color: white;
-            margin: 0 120px;
-        }
-
-        .image-top {
-            width: 40px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .image-top_2 {
-            width: 23px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .vertical-tittle {
-            position: relative;
-            top: 15px;
-            width: 250px;
-            font-size: 14px;
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: 20px;
-            color: gray;
-            width: 200px;
-            font-size: 16px;
-
-        }
-
-        footer {
-            background-color: rgb(5, 8, 12);
-        }
-
-        .footer {
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-        }
-
-        .footer ul {
-            list-style: none;
-        }
-
-        .footer>div {
-            width: 500px;
-        }
-
-        footer .footer-rights {
-            text-align: center;
-            color: gray;
-            padding: 10px 0;
-        }
-
-        .profile-btn {
-            background: linear-gradient(90deg, #b49f05 0%, #e6e1a6 100%);
-            color: #1e2167 !important;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 22px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none !important;
-            box-shadow: 0 2px 8px rgba(180, 159, 5, 0.12);
-            transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
-            cursor: pointer;
-            outline: none;
-            display: inline-block;
-            margin: 0;
-        }
-
-        .profile-btn:hover,
-        .profile-btn:focus {
-            transform: scale(1.09);
-            background: linear-gradient(90deg, #e6e1a6 0%, #b49f05 100%);
-            box-shadow: 0 4px 16px rgba(180, 159, 5, 0.22);
-            color: #1e2167 !important;
-            text-decoration: none !important;
-        }
-
-        .profile-btn:active {
-            transform: scale(0.97);
-            box-shadow: 0 1px 4px rgba(180, 159, 5, 0.18);
-        }
-
-        .publication-link {
-            color: #fff !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-            transition: color 0.18s;
-        }
-
-        .publication-link:hover,
-        .publication-link:focus {
-            color: #b49f05 !important;
-            text-decoration: none !important;
-        }
-
-        .publication-list a {
-            color: #fff !important;
-            text-decoration: none !important;
-            border-bottom: none !important;
-            transition: color 0.18s;
-        }
-
-        .publication-list a:hover,
-        .publication-list a:focus {
-            color: #b49f05 !important;
-            text-decoration: none !important;
-        }
-
-        @media (max-width: 900px) {
-            .firstSection,
-            .secondSection,
-            .thirdSection {
-                max-width: 98vw;
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-
-            .firstSection>div,
-            .secondSection>div,
-            .thirdSection>div {
-                width: 100% !important;
-            }
-
-            .firstSection {
-                margin: 18px 0;
-            }
-
-            .thirdSection {
-                padding-top: 18px;
-            }
-
-            .secondSection .box,
-            .thirdSection .box {
-                width: 98vw;
-                margin: 24px 0;
-            }
-        }
-
-        @media (max-width: 700px) {
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 8px 0;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 8px;
-                margin-top: 8px;
-            }
-
-            nav ul li {
-                margin: 8px 0;
-            }
-
-            .firstSection {
-                padding: 0 4px;
-            }
-
-            .firstSection>div,
-            .secondSection>div,
-            .thirdSection>div {
-                width: 100% !important;
-            }
-
-            .firstSection .buttons,
-            .buttons {
-                flex-direction: column !important;
-                gap: 10px !important;
-                align-items: stretch;
-            }
-
-            .firstSection img,
-            .secondSection img,
-            .thirdSection img,
-            img {
-                width: 90px !important;
-                height: 90px !important;
-                margin: 0 auto;
-                display: block;
-            }
-
-            [style*="display: grid;"] {
-                grid-template-columns: 1fr !important;
-                gap: 18px !important;
-            }
-
-            .vertical-tittle,
-            .vertical-desc {
-                width: 100% !important;
-                text-align: left;
-            }
-
-            .footer {
-                flex-direction: column;
-                padding: 18px 8px;
-                align-items: center;
-            }
-
-            .footer>div {
-                width: 100% !important;
-                margin-bottom: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 15px;
-            }
-
-            h1,
-            h2,
-            h3 {
-                font-size: 1.1em !important;
-            }
-
-            .firstSection,
-            .secondSection,
-            .thirdSection {
-                padding: 0 2px;
-            }
-
-            .profile-btn,
-            .btn {
-                padding: 8px 10px !important;
-                font-size: 0.95rem !important;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Groups — Dr. Krishnandu Hazra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
-    <header>
-        <nav>
-            <div class="left" style="color: black;"><strong>Dr. Krishnandu Hazra</strong> </div>
-            <div class="right"></div>
-            <ul>
-                <li><a href="index.html"><strong>Home</strong></a></li>
-                <li><a href="research.html"><strong>Research</strong></a></li>
-                <li><a href="research_groups.html"><strong>Research Groups</strong></a></li>
-                <li><a href="publications.html"><strong>Publications</strong></a></li>
-                <li><a href="contact.html"><strong>Contact Me</strong></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="firstSection"
-            style="flex-direction: column; align-items: center; justify-content: flex-start; min-height: 40vh;">
-            <h2 style="font-size:1.7rem; color:#fff; margin-bottom: 32px; letter-spacing: 1px; text-align: center;">
-                Phd Students</h2>
-            <div style="display: flex; flex-direction: column; gap: 25px; width: 100%; max-width: 1100px;">
-                <div style="display: grid; grid-template-columns: 1fr 50px; align-items: center; gap: 32px;">
-                    <div>
-                        <h3 style="color:#b49f05; margin-bottom: 8px;">Partha Pratim Sarmah</h3>
-                        <p style="color:#eee; margin-bottom: 22px;">
-                            Partha Pratim Sarmah joined as a JRF cum PhD student on September 15, 2025, at IIITG,
-                            working on an <span class="purple">ANRF-funded</span> project titled "<span
-                                class="purple">Design of a Distributed Resource-Aware Framework to Enhance Resiliency of
-                                Multi-UAV Networks Using a Bio-Inspired Approach.</span>" His research area focuses on
-                            <span class="purple">UAV communication and networking.</span>
-                        </p>
-                        <h4 style="margin-bottom: 10px; margin-top: 0;">Publications:</h4>
-                        <ul class="publication-list" style="margin-bottom: 24px;">
-                            <li>
-                                <h6> <a href="https://ieeexplore.ieee.org/document/11418271">Partha Pratim Sarmah;
-                                        Satyaki Roy;
-                                        Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV Agents via
-                                        Distributed
-                                        CoordiNAtion", 18th International Conference on COMmunication Systems & NETworkS
-                                        (COMSNETS 2026), (2026), IEEE</a></h6>
-                            </li>
-                            <li>
-                                <h6> <a
-                                        href="https://www.degruyterbrill.com/document/doi/10.1515/9783111541235-016/html">Partha
-                                        Pratim Sarmah, Aryan Choudhari, Partha Sarathi Paul, and Krishnandu Hazra, "On
-                                        Mental
-                                        Health Monitoring Using Commercial Wearable Devices and Machine Intelligence",
-                                        Machine
-                                        Learning in Healthcare: Data-Driven Decisions, Predictive Modelling,
-                                        Personalized
-                                        Medicine, (2025), pages. 305-334, De Gruyter</a></h6>
-                            </li>
-                            <li>
-                                <h6> <a
-                                        href="https://www.degruyterbrill.com/document/doi/10.1515/9783111541235-016/html">Partha
-                                        Pratim Sarmah, Aryan Choudhari, Partha Sarathi Paul, and Krishnandu Hazra, "On
-                                        Mental
-                                        Health Monitoring Using Commercial Wearable Devices and Machine Intelligence",
-                                        Machine
-                                        Learning in Healthcare: Data-Driven Decisions, Predictive Modelling,
-                                        Personalized
-                                        Medicine, (2025), pages. 305-334, De Gruyter</a></h6>
-                            </li>
-                        </ul>
+  <header>
+    <nav class="site-nav">
+      <div class="nav-brand">Dr. Krishnandu Hazra</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="research_groups.html">Research Groups</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                        <h4 style="color:#d7d5c6; margin-bottom: 8px;">Social Network Profiles:</h4>
+  <main>
+    <div class="page-wrapper">
+      <h1 class="section-heading" style="font-size:clamp(1.6rem,4vw,2.4rem);">Research Groups</h1>
+    </div>
 
-                        <div class="buttons" style="display: flex; gap: 16px; margin-top: 8px;">
-                            <a class="btn profile-btn" href="https://www.linkedin.com/in/partha-pratim-sarmah/"
-                                target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="btn profile-btn" href="https://github.com/SParthaPratimSarmah" target="_blank"
-                                rel="noopener noreferrer">Github</a>
-                            <a class="btn profile-btn"
-                                href="https://scholar.google.com/citations?user=ZxeN9_cAAAAJ&hl=en" target="_blank"
-                                rel="noopener noreferrer">Google Scholar</a>
-                        </div>
+    <!-- ══════════════════════════════════════
+         PhD STUDENTS
+    ══════════════════════════════════════ -->
+    <h2 class="section-subheading" style="margin-top:10px;">PhD Students</h2>
 
-                    </div>
-                    <img src="Images/PPS.jpeg" alt="UAV Communication"
-                        style="width: 110px; height: 110px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 50px; align-items: center; gap: 32px;">
-                    <div>
-                        <h3 style="color:#b49f05; margin-bottom: 8px;">Sushmita Panda</h3>
-                        <p style="color:#eee;">
-                            Sushmita Panda joined as a PhD student on September 22, 2025, at IIITG under the <span
-                                class="purple">institute fellowship</span>. Her research area focuses on <span
-                                class="purple">social network analysis. </span></p>
-                        <h4 style="margin-bottom: 10px; margin-top: 0;">Publications:</h4>
-                        <ul class="publication-list" style="margin-bottom: 24px;">
-                            <li>
-                                <h6> <a href="https://ieeexplore.ieee.org/document/11418271">Partha Pratim Sarmah;
-                                        Satyaki Roy;
-                                        Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV Agents via
-                                        Distributed
-                                        CoordiNAtion", 18th International Conference on COMmunication Systems & NETworkS
-                                        (COMSNETS 2026), (2026), IEEE</a></h6>
-                            </li>
-                        </ul>
-                        <h4 style="color:#d7d5c6; margin-bottom: 8px;">Social Network Profiles:</h4>
+    <div class="student-list">
 
-                        <div class="buttons" style="display: flex; gap: 16px; margin-top: 8px;">
-                            <a class="btn profile-btn" href="https://www.linkedin.com/in/partha-pratim-sarmah/"
-                                target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="btn profile-btn" href="https://github.com/SParthaPratimSarmah" target="_blank"
-                                rel="noopener noreferrer">Github</a>
-                            <a class="btn profile-btn"
-                                href="https://scholar.google.com/citations?user=ZxeN9_cAAAAJ&hl=en" target="_blank"
-                                rel="noopener noreferrer">Google Scholar</a>
-                        </div>
-                    </div>
+      <!-- Partha Pratim Sarmah (PhD) -->
+      <div class="student-card">
+        <div>
+          <h3>Partha Pratim Sarmah</h3>
+          <p>
+            Partha Pratim Sarmah joined as a JRF cum PhD student on September 15, 2025, at IIITG, working on an
+            <span class="purple">ANRF-funded</span> project titled "<span class="purple">Design of a Distributed
+            Resource-Aware Framework to Enhance Resiliency of Multi-UAV Networks Using a Bio-Inspired
+            Approach.</span>" His research area focuses on <span class="purple">UAV communication and networking.</span>
+          </p>
 
-                    <img src="Images/" alt="UAV Communication"
-                        style="width: 110px; height: 110px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 50px; align-items: center; gap: 32px;">
-                    <div>
-                        <h3 style="color:#b49f05; margin-bottom: 8px;">Dipanjan Joardar</h3>
-                        <p style="color:#eee;">
-                            Dipanjan Joardar joined as a <span class="purple">part-time</span> PhD student on January,
-                            2026, at IIITG. His research area focuses on <span class="purple">Machine Unlearning.
-                            </span></p>
+          <h4>Publications:</h4>
+          <ul class="student-pub-list">
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/11418271" target="_blank" rel="noopener noreferrer">
+                Partha Pratim Sarmah; Satyaki Roy; Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV
+                Agents via Distributed CoordiNAtion", COMSNETS 2026, IEEE.
+              </a>
+            </li>
+            <li>
+              <a href="https://www.degruyterbrill.com/document/doi/10.1515/9783111541235-016/html" target="_blank" rel="noopener noreferrer">
+                Partha Pratim Sarmah, Aryan Choudhari, Partha Sarathi Paul, and Krishnandu Hazra, "On Mental Health
+                Monitoring Using Commercial Wearable Devices and Machine Intelligence", De Gruyter, (2025).
+              </a>
+            </li>
+          </ul>
 
-                        <h4>Publications:</h4>
-                        <ul class="publication-list" style="margin-bottom: 24px;">
-                            <li>
-                                <h6> <a href="https://ieeexplore.ieee.org/document/11418271">Partha Pratim Sarmah;
-                                        Satyaki Roy;
-                                        Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV Agents via
-                                        Distributed
-                                        CoordiNAtion", 18th International Conference on COMmunication Systems & NETworkS
-                                        (COMSNETS 2026), (2026), IEEE</a></h6>
-                            </li>
-                        </ul>
-                        <h4 style="color:#d7d5c6; margin-bottom: 8px;">Social Network Profiles:</h4>
+          <h4>Social Network Profiles:</h4>
+          <div class="btn-group">
+            <a class="profile-btn" href="https://www.linkedin.com/in/partha-pratim-sarmah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="profile-btn" href="https://github.com/SParthaPratimSarmah" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="profile-btn" href="https://scholar.google.com/citations?user=ZxeN9_cAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <img src="Images/PPS.jpeg" alt="Partha Pratim Sarmah">
+      </div>
 
-                        <div class="buttons" style="display: flex; gap: 16px; margin-top: 8px;">
-                            <a class="btn profile-btn" href="https://www.linkedin.com/in/partha-pratim-sarmah/"
-                                target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                            <a class="btn profile-btn" href="https://github.com/SParthaPratimSarmah" target="_blank"
-                                rel="noopener noreferrer">Github</a>
-                            <a class="btn profile-btn"
-                                href="https://scholar.google.com/citations?user=ZxeN9_cAAAAJ&hl=en" target="_blank"
-                                rel="noopener noreferrer">Google Scholar</a>
-                        </div>
-                    </div>
+      <!-- Sushmita Panda -->
+      <div class="student-card">
+        <div>
+          <h3>Sushmita Panda</h3>
+          <p>
+            Sushmita Panda joined as a PhD student on September 22, 2025, at IIITG under the
+            <span class="purple">institute fellowship</span>. Her research area focuses on
+            <span class="purple">social network analysis.</span>
+          </p>
 
-                    <img src="Images/UAV communication Photo.png" alt="UAV Communication"
-                        style="width: 110px; height: 110px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                </div>
+          <h4>Publications:</h4>
+          <ul class="student-pub-list">
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/11418271" target="_blank" rel="noopener noreferrer">
+                Partha Pratim Sarmah; Satyaki Roy; Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV
+                Agents via Distributed CoordiNAtion", COMSNETS 2026, IEEE.
+              </a>
+            </li>
+          </ul>
 
+          <h4>Social Network Profiles:</h4>
+          <div class="btn-group">
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <!-- No photo yet — placeholder -->
+        <img src="Images/UAV communication Photo.png" alt="Sushmita Panda" style="opacity:0.4;">
+      </div>
 
+      <!-- Dipanjan Joardar -->
+      <div class="student-card">
+        <div>
+          <h3>Dipanjan Joardar</h3>
+          <p>
+            Dipanjan Joardar joined as a <span class="purple">part-time</span> PhD student in January 2026, at IIITG.
+            His research area focuses on <span class="purple">Machine Unlearning.</span>
+          </p>
 
+          <h4>Publications:</h4>
+          <ul class="student-pub-list">
+            <li>
+              <a href="https://ieeexplore.ieee.org/document/11418271" target="_blank" rel="noopener noreferrer">
+                Partha Pratim Sarmah; Satyaki Roy; Krishnandu Hazra, "NIRVANA: Nature-Inspired Resilience for UAV
+                Agents via Distributed CoordiNAtion", COMSNETS 2026, IEEE.
+              </a>
+            </li>
+          </ul>
 
-                <h2 style="font-size:1.7rem; color:#fff; margin-bottom: 32px; letter-spacing: 1px; text-align: center;">
-                    M.Tech Students</h2>
-                <div style="display: flex; flex-direction: column; gap: 25px; width: 100%; max-width: 1100px;">
+          <h4>Social Network Profiles:</h4>
+          <div class="btn-group">
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <img src="Images/UAV communication Photo.png" alt="Dipanjan Joardar">
+      </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 50px; align-items: center; gap: 32px;">
-                        <div>
-                            <h3 style="color:#b49f05; margin-bottom: 8px;">Partha Pratim Sarmah</h3>
-                            <p style="color:#eee;">
-                                Partha Pratim Sarmah completed his thesis in Machine Learning titled
-                                "<span class="purple">EMOTION PREDICTION USING COMMERCIAL SMARTWATCH</span>".
-                                This work has been published as both a
-                                <a class="publication-link"
-                                    href="https://www.degruyterbrill.com/document/doi/10.1515/9783111541235-016/html"
-                                    target="_blank" rel="noopener noreferrer">book chapter</a>
-                                and a
-                                <a class="publication-link"
-                                    href="https://ieeexplore.ieee.org/abstract/document/10984709?TSPD_101_R0=0807dc117eab2000fe756b4ee14541eb999ed2270ad2c7fcc9956bf58eb497d265892b65713f04a30870b68669143000dbb305b6da74968d6b75b52637ad225bc31602af34292a47e5858a442c2fc977a6ca5992c51d074ab463b3c8c63783c9"
-                                    target="_blank" rel="noopener noreferrer">conference paper</a>.
-                            </p>
+    </div>
 
-                            <h4 style="color:#d7d5c6; margin-bottom: 8px;">
-                                Duration: August 2024 – May 2025
-                            </h4>
+    <!-- ══════════════════════════════════════
+         M.Tech STUDENTS
+    ══════════════════════════════════════ -->
+    <h2 class="section-subheading" style="margin-top:48px;">M.Tech Students</h2>
 
+    <div class="student-list">
 
-                        </div>
-                        <img src="Images/UAV communication Photo.png" alt="UAV Communication"
-                            style="width: 110px; height: 110px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                    </div>
-                    <div style="display: grid; grid-template-columns: 1fr 50px; align-items: center; gap: 32px;">
-                        <div>
-                            <h3 style="color:#b49f05; margin-bottom: 8px;">Kamlesh Prasad</h3>
-                            <p style="color:#eee;">
-                                hello,
-                            <h4 style="color:#d7d5c6; margin-bottom: 8px;">Social Network Profiles:</h4>
+      <!-- Partha Pratim Sarmah (M.Tech) -->
+      <div class="student-card">
+        <div>
+          <h3>Partha Pratim Sarmah</h3>
+          <p>
+            Partha Pratim Sarmah completed his thesis in Machine Learning titled
+            "<span class="purple">EMOTION PREDICTION USING COMMERCIAL SMARTWATCH</span>".
+            This work has been published as both a
+            <a href="https://www.degruyterbrill.com/document/doi/10.1515/9783111541235-016/html"
+               target="_blank" rel="noopener noreferrer" style="color:var(--gold);">book chapter</a>
+            and a
+            <a href="https://ieeexplore.ieee.org/abstract/document/10984709"
+               target="_blank" rel="noopener noreferrer" style="color:var(--gold);">conference paper</a>.
+          </p>
+          <h4>Duration: August 2024 – May 2025</h4>
+        </div>
+        <img src="Images/PPS.jpeg" alt="Partha Pratim Sarmah">
+      </div>
 
+      <!-- Kamlesh Prasad -->
+      <div class="student-card">
+        <div>
+          <h3>Kamlesh Prasad</h3>
+          <p><em style="color:var(--gray-text);">Details coming soon.</em></p>
+          <h4>Social Network Profiles:</h4>
+          <div class="btn-group">
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Github</a>
+            <a class="profile-btn" href="#" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+        </div>
+        <img src="Images/UAV communication Photo.png" alt="Kamlesh Prasad">
+      </div>
 
-                        </div>
+    </div>
 
-                        <img src="Images/UAV communication Photo.png" alt="UAV Communication"
-                            style="width: 110px; height: 110px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+    <!-- ══════════════════════════════════════
+         B.Tech STUDENTS
+    ══════════════════════════════════════ -->
+    <h2 class="section-subheading" style="margin-top:48px;">B.Tech Students</h2>
+    <p class="text-center gray-txt" style="margin-bottom:48px;"><em>Details coming soon.</em></p>
 
+  </main>
 
-
-
-                <h2 style="font-size:1.7rem; color:#fff; margin-bottom: 32px; letter-spacing: 1px; text-align: center;">
-                    B.Tech Students</h2>
-
-
-
-
-            </div>
-        </section>
-
-    </main>
+  <footer class="site-footer">
+    Copyright &copy; www.krishandu.com | All rights reserved.
+  </footer>
 
 </body>
-
 </html>

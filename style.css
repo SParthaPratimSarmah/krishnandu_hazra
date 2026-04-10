@@ -1,0 +1,736 @@
+/* ============================================================
+   Dr. Krishnandu Hazra — Portfolio
+   style.css  |  Shared across all pages
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --gold:       #b49f05;
+  --gold-light: #e6e1a6;
+  --navy:       rgb(1, 1, 69);
+  --navy-card:  rgba(255,255,255,0.07);
+  --navy-card2: rgba(255,255,255,0.13);
+  --purple:     blueviolet;
+  --purple-soft: rgb(225, 196, 252);
+  --nav-bg:     rgb(236, 244, 168);
+  --footer-bg:  rgb(5, 8, 12);
+  --divider:    rgb(172, 163, 246);
+  --gray-text:  gray;
+  --white:      #ffffff;
+
+  --font-main: 'Poppins', sans-serif;
+
+  --section-max: 900px;
+  --section-pad: 0 clamp(16px, 4vw, 64px);
+
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-card: 0 4px 24px rgba(180,159,5,0.08);
+  --shadow-img: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--white);
+  font-family: var(--font-main);
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 clamp(12px, 3vw, 48px);
+  min-height: 50px;
+  background-color: var(--nav-bg);
+}
+
+.nav-brand {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  padding: 8px 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  padding: 6px 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  padding: 4px 2px;
+  transition: color 0.18s;
+  white-space: nowrap;
+}
+
+.nav-links li a:hover {
+  color: rgb(234, 64, 48);
+}
+
+/* Marquee bar */
+.marquee-bar {
+  background-color: #fafafa;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquee-bar marquee a {
+  color: red;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+/* ============================================================
+   PAGE WRAPPER
+   ============================================================ */
+.page-wrapper {
+  padding: clamp(24px, 5vw, 60px) clamp(16px, 4vw, 60px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+.section-heading {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: clamp(18px, 3vw, 32px);
+  letter-spacing: 1px;
+}
+
+.section-subheading {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: clamp(16px, 2.5vw, 28px);
+  letter-spacing: 0.5px;
+}
+
+/* Coloured divider under headings */
+.section-divider {
+  border: none;
+  height: 2px;
+  background: var(--divider);
+  margin: 10px 0 18px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   CARD  (shared glass-style card)
+   ============================================================ */
+.card {
+  background: var(--navy-card);
+  border-radius: var(--radius-lg);
+  padding: clamp(18px, 3vw, 32px);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 28px;
+}
+
+.card h2 {
+  color: var(--gold);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: var(--gold);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  margin: 16px 0 6px;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #1e2167;
+  color: wheat;
+  border: 2px solid wheat;
+  border-radius: 6px;
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 14px rgba(180,159,5,0.22);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Gold gradient button (profile links) */
+.profile-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #1e2167 !important;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(0.82rem, 1.4vw, 0.98rem);
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(180,159,5,0.12);
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  white-space: nowrap;
+}
+
+.profile-btn:hover,
+.profile-btn:focus {
+  transform: scale(1.09);
+  background: linear-gradient(90deg, var(--gold-light) 0%, var(--gold) 100%);
+  box-shadow: 0 5px 18px rgba(180,159,5,0.22);
+  text-decoration: none !important;
+}
+
+.profile-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background-color: var(--footer-bg);
+  padding: 20px clamp(12px, 4vw, 60px);
+  text-align: center;
+  color: var(--gray-text);
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* ============================================================
+   UTILITY
+   ============================================================ */
+.purple   { color: var(--purple); }
+.gold     { color: var(--gold); }
+.gray-txt { color: var(--gray-text); }
+.text-justify { text-align: justify; }
+.text-center  { text-align: center; }
+
+/* ============================================================
+   INDEX PAGE — Hero
+   ============================================================ */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 5vw, 56px) clamp(16px, 4vw, 60px) 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.hero-text #element {
+  color: var(--purple-soft);
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 190px;
+}
+
+.hero-photo {
+  width: clamp(120px, 14vw, 200px);
+  height: clamp(120px, 14vw, 200px);
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-img);
+}
+
+/* News side box */
+.news-box {
+  background: var(--navy-card2);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  box-shadow: 0 2px 12px rgba(180,159,5,0.13);
+  width: clamp(170px, 20vw, 250px);
+  text-align: justify;
+}
+
+.news-box h3 {
+  color: var(--gold);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.news-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.news-box a {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+/* ============================================================
+   TIMELINE  (Work / Education)
+   ============================================================ */
+.timeline-section {
+  max-width: 1000px;
+  margin: 50px auto 0;
+  padding: 0 clamp(12px, 3vw, 40px);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  border-left: 3px solid var(--divider);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -39px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 3px solid var(--navy);
+}
+
+.timeline-item .tl-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  position: absolute;
+  left: -50px;
+  top: 0;
+}
+
+.timeline-item h3 {
+  color: var(--gold);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  margin-bottom: 2px;
+}
+
+.timeline-item .tl-date {
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  color: var(--gray-text);
+  font-size: clamp(0.88rem, 1.5vw, 0.98rem);
+  text-align: justify;
+}
+
+/* ============================================================
+   RESEARCH PAGE — Interest cards
+   ============================================================ */
+.research-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 40px);
+}
+
+.research-item {
+  display: grid;
+  grid-template-columns: 1fr clamp(140px, 18vw, 220px);
+  gap: clamp(18px, 3vw, 36px);
+  align-items: start;
+}
+
+.research-item h3 {
+  color: var(--gold);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 10px;
+}
+
+.research-item p {
+  color: #eee;
+  font-size: clamp(0.88rem, 1.4vw, 0.98rem);
+  text-align: justify;
+}
+
+.research-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-img);
+}
+
+/* ============================================================
+   PUBLICATIONS PAGE
+   ============================================================ */
+.pub-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 40px);
+}
+
+.pub-category-label {
+  color: antiquewhite;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin: 6px 0 4px;
+}
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 8px 0 20px;
+}
+
+.pub-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.pub-list li img {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.pub-list li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: clamp(0.82rem, 1.4vw, 0.92rem);
+  line-height: 1.55;
+  transition: color 0.18s;
+}
+
+.pub-list li a:hover {
+  color: rgb(234, 64, 48);
+}
+
+/* ============================================================
+   RESEARCH GROUPS PAGE — Student cards
+   ============================================================ */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(12px, 3vw, 40px);
+}
+
+.student-card {
+  display: grid;
+  grid-template-columns: 1fr clamp(90px, 10vw, 130px);
+  gap: clamp(16px, 2.5vw, 32px);
+  align-items: start;
+  background: var(--navy-card);
+  border-radius: var(--radius-lg);
+  padding: clamp(16px, 2.5vw, 28px);
+  box-shadow: var(--shadow-card);
+}
+
+.student-card h3 {
+  color: var(--gold);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  margin-bottom: 8px;
+}
+
+.student-card p {
+  color: #eee;
+  font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.student-card h4 {
+  color: #d7d5c6;
+  font-size: clamp(0.82rem, 1.3vw, 0.9rem);
+  margin-bottom: 6px;
+}
+
+.student-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-img);
+}
+
+.student-pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.student-pub-list li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 1.3vw, 0.88rem);
+  line-height: 1.5;
+  transition: color 0.18s;
+}
+
+.student-pub-list li a:hover {
+  color: var(--gold);
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 55vh;
+  padding: clamp(32px, 6vw, 80px) clamp(16px, 4vw, 48px);
+}
+
+.contact-card {
+  background: var(--navy-card);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 44px) clamp(20px, 5vw, 52px);
+  box-shadow: var(--shadow-card);
+  max-width: 680px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card .contact-label {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--white);
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  text-decoration: underline;
+}
+
+.contact-block {
+  margin-bottom: 24px;
+}
+
+/* ============================================================
+   RESPONSIVE OVERRIDES
+   ============================================================ */
+
+/* Tablet — ≤ 900 px */
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .hero-photo {
+    width: clamp(90px, 22vw, 140px);
+    height: clamp(90px, 22vw, 140px);
+  }
+
+  .news-box {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .research-item {
+    grid-template-columns: 1fr;
+  }
+
+  .research-item img {
+    width: clamp(140px, 40vw, 220px);
+    margin: 0 auto;
+  }
+
+  .student-card {
+    grid-template-columns: 1fr;
+  }
+
+  .student-card img {
+    width: clamp(80px, 22vw, 120px);
+    margin: 0 auto 4px;
+  }
+}
+
+/* Mobile — ≤ 640 px */
+@media (max-width: 640px) {
+
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 14px;
+    gap: 4px;
+  }
+
+  .nav-links {
+    gap: 6px 16px;
+  }
+
+  .hero {
+    padding: 16px 14px 0;
+  }
+
+  .hero-text {
+    font-size: 0.97rem;
+  }
+
+  .hero-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .news-box {
+    width: 100%;
+  }
+
+  .timeline-section,
+  .research-grid,
+  .pub-section,
+  .student-list {
+    padding: 0 10px;
+  }
+
+  .research-item img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn,
+  .profile-btn {
+    text-align: center;
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+
+  .site-footer {
+    font-size: 0.82rem;
+    padding: 14px 10px;
+  }
+}
+
+/* Small mobile — ≤ 400 px */
+@media (max-width: 400px) {
+  html { font-size: 14px; }
+
+  .hero-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .student-card img {
+    width: 80px;
+    height: 80px;
+  }
+}

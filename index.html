@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Krishnandu Hazra Portfollio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700& display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(1, 1, 69);
+            color: white;
+            font-size: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 40px;
+            background-color: rgb(236, 244, 168);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        button a {
+            text-decoration: none;
+            color: #b49f05;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            color: rgb(234, 64, 48);
+            font-size: 1.2rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+            height: 50vb;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 1.5rem;
+            margin: 70px 0;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: wheat;
+            border: 2px solid wheat;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .leftSection .btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 12px rgba(180, 159, 5, 0.2);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .leftSection .btn:active {
+            transform: scale(0.98);
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: rgb(225, 196, 252);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .hr {
+            border: 0;
+            background: rgb(172, 163, 246);
+            height: 1px;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(172, 163, 246);
+            height: 2px;
+            margin: 40px 84px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection .box {
+            background: white;
+            width: 50vw;
+            height: 3px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 3px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+
+        .secondSection .vertical {
+            height: 25px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .thirdSection .vertical {
+            height: 25px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 40px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .image-top_2 {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-tittle {
+            position: relative;
+            top: 15px;
+            width: 250px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 20px;
+            color: gray;
+            width: 200px;
+            font-size: 16px;
+
+        }
+
+        footer {
+            background-color: rgb(5, 8, 12);
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 500px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" style="color: black;"><strong>Dr. Krishnandu Hazra</strong> </div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="research.html"><strong>Research</strong></a></li>
+                <li><a href="research_groups.html"><strong>Research Groups</strong></a></li>
+                <li><a href="publications.html"><strong>Publications</strong></a></li>
+                <li><a href="contact.html"><strong>Contact Me</strong></a></li>
+            </ul>
+        </nav>
+        <nav style="background-color: #fafafa;height: 20px; color: white;">
+            <marquee behavior="scroll" direction="left" scrollamount="4">
+                <a href="https://drive.google.com/file/d/1Q__yV7dGK33vbKQ_RI_Jp5S13QnvGfbz/view?usp=sharing"><strong>I am currently looking for internship student for summer-intern.</strong></a> <a href="https://docs.google.com/forms/d/1KchbRypqAFymCOdFCPKVYyJ19GtXxn_esNFP4so6uVY/viewform?edit_requested=true">Apply Now</a>
+            </marquee>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Dr. Krishnandu Hazra.</span>
+                I am presently working as an Assistent Professor in the Department of Computer Science
+                and Engineering at the <span class="purple">Indian Instiute of Information Technology Guwahati
+                    (IIITG).</span>
+                </span>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a class="btn" href="https://www.linkedin.com/in/krishnandu-hazra-phd-b6934954/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a class="btn" href="https://github.com/Krishnandu91" target="_blank"
+                        rel="noopener noreferrer">Github</a>
+                    <a class="btn" href="https://scholar.google.com/citations?user=vD1iYKQAAAAJ&hl=en&oi=ao"
+                        target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                </div>
+            </div>
+            </div>
+            <div class="rightSection">
+                <img src="Images/KZ-passport.png" alt="Scientist phot">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1 style="color: #b49f05;">Work Experiences</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="Images/Assistent professor.png" alt="">
+                    <div class="vertical-tittle">
+                        Assistent Professor
+                    </div>
+                    <div class="vertical-tittle">
+                        (Jan 2021 - June 2022)
+                    </div>
+                    <div class="vertical-desc">
+                        Department of Computer Science and Engineering, Dr. B. C. Roy Engineering College, Durgapur,
+                        West Bengal, India
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Images/Assistent professor.png" alt="">
+                    <div class="vertical-tittle">
+                        Assistent Professor
+                    </div>
+                    <div class="vertical-tittle">
+                        (June 2022 - Dece 2023)
+                    </div>
+                    <div class="vertical-desc">
+                        School of Computer Engineering at Kalinga Institute of Industrial Technology (KIIT), Deemed to
+                        be University, Bhubaneswar, Odisha, India
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="Images/Assistent professor.png" alt="">
+                    <div class="vertical-tittle">
+                        Assistent Professor
+                    </div>
+                    <div class="vertical-tittle">
+                        (Jan 2024 - to till date)
+                    </div>
+                    <div class="vertical-desc">
+                        Department of Computer Science and Engineering at Indian Institute of Information Technology
+                        Guwahati (IIITG), Assam, India
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/research.png" alt="">
+                    <div class="vertical-tittle">
+                        Junior Research Fellow at
+                    </div>
+                    <div class="vertical-tittle">
+                        (Sept 2015 - Jul 2017)
+                    </div>
+                    <div class="vertical-desc">
+                        NIT Durgapur in the project titled "<span title="purple">Post-Disaster Situation Analysis and
+                            Resource Management Using
+                            Delay-Tolerant Peer-to-Peer Wireless Networks (DISARM)”, sponsored by ITRA, Digital India
+                            Corporation, Government of India.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/research.png" alt="">
+                    <div class="vertical-tittle">
+                        PhD Research Scholar
+                    </div>
+                    <div class="vertical-tittle">
+                        (Jul 2017 - Dec 2020)
+                    </div>
+                    <div class="vertical-desc">
+                        MHRD fellowship, NIT Durgapur.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="thirdSection">
+            <h1 style="color: #b49f05;">Educational Qualification</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/education.png" alt="">
+                    <div class="vertical-tittle">PhD in CSE</div>
+                    <div class="vertical-tittle">(2017-2022)</div>
+                    <div class="vertical-desc">National Institute of Technology Durgapur, West Bengal, India in the year
+                        2022</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/education.png" alt="">
+                    <div class="vertical-tittle">M.Tech in CSE</div>
+                    <div class="vertical-tittle">(2013 - 2015)</div>
+                    <div class="vertical-desc">Kalyani Government Engineering College, West Bengal, India</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/education.png" alt="">
+                    <div class="vertical-tittle">B.Tech in CSE</div>
+                    <div class="vertical-tittle">(2009 - 2013)</div>
+                    <div class="vertical-desc">Jalpaiguri Government Engineering College, West Bengal, India</div>
+                </div>
+            </div>
+        </section>
+        <section class="forthSection" style="max-width: 80vw; margin: 40px auto 0 auto; color: white;">
+            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Awards & Grants</h1>
+            <div
+                style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 24px 32px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 900px; margin: 0 auto 32px auto;">
+                <h2 style="color:#b49f05; font-size:1.3rem; margin-bottom: 10px;">ANRF Research Grant under Prime
+                    Minister Early Career Research Grant (PM ECRG), Govt. of India. Year: 2025</h2>
+                <h3 style="color:#b49f05; font-size:1.1rem; margin: 18px 0 6px 0;">Sponsored Project</h3>
+                <ul style="margin-left: 18px;">
+                    <li><strong>Title:</strong> Design of a Distributed Resource-Aware Framework to Enhance Resiliency
+                        of Multi-UAV Networks Using Bio-Inspired Approach</li>
+                    <li><strong>Principal Investigator:</strong> Dr. Krishnandu Hazra</li>
+                    <li><strong>Total Budget:</strong> 27,15,009 INR</li>
+                    <li><strong>Duration:</strong> 3 Years</li>
+                    <li><strong>Sponsoring Agency:</strong> ANRF(SERB), Govt. of India.</li>
+                    <li><strong>Current Status:</strong> Ongoing</li>
+                </ul>
+            </div>
+            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Teaching</h1>
+            <div
+                style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 24px 32px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 900px; margin: 0 auto 32px auto;">
+                <ul style="margin-left: 18px;">
+                    <li>Winter 2024: CS330 - Software Engineering [January-April, 2024]</li>
+                    <li>Winter 2024: CS331 - Software Engineering lab [January-April, 2024]</li>
+                    <li>Winter 2024: CS111 - Data Structure Lab [January-April, 2024]</li>
+                    <li>Monsoon 2024: CS301 - Theory of Computation [July-November, 2024]</li>
+                    <li>Monsoon 2024: CS351 - Cloud Computing Lab [July-November, 2024]</li>
+                    <li>Winter 2025: CS231 - Operating Systems [January-April, 2025]</li>
+                    <li>Winter 2025: CS232 - Operating Systems Lab [January-April, 2025]</li>
+                    <li>Monsoon 2025: CS301 - Theory of Computation [July-November, 2025]</li>
+                    <li>Monsoon 2025: CS210 - Algorithm Lab [July-November, 2025]</li>
+                    <li>Winter 2026: CS231 - Operating Systems [January-April, 2026]</li>
+                    <li>Winter 2026: CS232 - Operating Systems Lab [January-April, 2026]</li>
+                </ul>
+            </div>
+            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Administrative
+                Responsibility</h1>
+            <div
+                style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 24px 32px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 900px; margin: 0 auto 32px auto;">
+                <ul style="margin-left: 18px;">
+                    <li>Warden of Boys' Hostel: From April 2024 to Till date</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-rights">
+                Copyright &#169; www.krishandu.com | All rights reserved.
+            </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['My research interests are: ', 'UAV Communications, Wireless Networks, Information Retrieval, AI/ML, Affective Computing, Social Networks, NLP, Graph Theory, etc.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>

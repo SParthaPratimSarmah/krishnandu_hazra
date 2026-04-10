@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rsearch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700& display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(1, 1, 69);
+            color: white;
+            font-size: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 40px;
+            background-color: rgb(236, 244, 168);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav ul li a:hover {
+            color: rgb(234, 64, 48);
+            font-size: 1.2rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 80px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 1.5rem;
+            margin: 70px 0;
+        }
+
+        .leftSection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: wheat;
+            border: 2px solid wheat;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: blueviolet;
+        }
+
+        #element {
+            color: rgb(225, 196, 252);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .hr {
+            border: 0;
+            background: rgb(172, 163, 246);
+            height: 1px;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(172, 163, 246);
+            height: 2px;
+            margin: 40px 84px;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .thirdSection .box {
+            background: white;
+            width: 80vw;
+            height: 3px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 3px;
+            margin: 50px 0;
+            display: flex;
+        }
+
+
+        .secondSection .vertical {
+            height: 25px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .thirdSection .vertical {
+            height: 25px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 40px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .image-top_2 {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-tittle {
+            position: relative;
+            top: 15px;
+            width: 250px;
+            font-size: 14px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 20px;
+            color: gray;
+            width: 200px;
+            font-size: 16px;
+
+        }
+
+        footer {
+            background-color: rgb(5, 8, 12);
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left" style="color: black;"><strong>Dr. Krishnandu Hazra</strong> </div>
+            <div class="right"></div>
+            <ul>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="research.html"><strong>Research</strong></a></li>
+                <li><a href="research_groups.html"><strong>Research Groups</strong></a></li>
+                <li><a href="publications.html"><strong>Publications</strong></a></li>
+                <li><a href="contact.html"><strong>Contact Me</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection"
+            style="flex-direction: column; align-items: center; justify-content: flex-start; min-height: 40vh;">
+            <h1 style="font-size:2.5rem; color:#b49f05; margin-bottom: 18px; letter-spacing: 2px; text-align: center;">
+                Research</h1>
+            <h2 style="font-size:1.7rem; color:#fff; margin-bottom: 32px; letter-spacing: 1px; text-align: center;">
+                My Research Interests are:</h2>
+            <div style="display: flex; flex-direction: column; gap: 32px; width: 100%; max-width: 1100px;">
+                <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
+                    <div>
+                        <h3 style="color:#b49f05; margin-bottom: 8px;">UAV Communication and Networks</h3>
+                        <p style="color:#eee;">Unmanned Aerial Vehicles (UAVs) have emerged as a transformative solution
+                            in modern wireless communication networks due to their high mobility, flexibility, and rapid
+                            deployment capabilities. Unlike traditional terrestrial infrastructure, UAVs can be
+                            dynamically positioned in three-dimensional space, enabling efficient on-demand connectivity
+                            in challenging and infrastructure-limited environments such as disaster-affected areas,
+                            remote regions, and dense urban scenarios.
+
+                            UAV-assisted communication systems are widely applied in disaster management, emergency
+                            response, rural connectivity, precision agriculture, surveillance, environmental monitoring,
+                            and smart city ecosystems. In these systems, UAVs function as aerial base stations, relays,
+                            or data collectors, forming adaptive and self-organizing networks to support ground users.
+                            Their ability to establish line-of-sight (LoS) communication significantly improves signal
+                            quality and coverage compared to conventional ground-based systems.
+
+                            Recent advancements in this field are driven by the integration of emerging technologies
+                            such as 5G/6G networks, Internet of Things (IoT), edge computing, and Artificial
+                            Intelligence (AI). AI-driven optimization techniques, including machine learning and
+                            reinforcement learning, are increasingly being used to determine optimal UAV placement,
+                            trajectory planning, resource allocation, and user association. These intelligent approaches
+                            help in enhancing network performance, reducing latency, and improving energy efficiency.
+
+                            Despite these advantages, UAV communication networks face several critical challenges. These
+                            include limited battery life and energy constraints, interference management, spectrum
+                            allocation, secure communication, scalability in multi-UAV systems, and maintaining reliable
+                            connectivity in highly dynamic environments. Additionally, efficient coordination among
+                            multiple UAVs (swarm intelligence), collision avoidance, and real-time decision-making
+                            remain open research problems.
+
+                            To address these challenges, current research focuses on developing robust, scalable, and
+                            energy-efficient frameworks. This includes optimization-based models, graph-theoretic
+                            approaches, distributed control mechanisms, and AI-enabled adaptive systems. The ultimate
+                            goal is to design UAV-assisted networks that can provide seamless, reliable, and
+                            high-quality communication services, especially in scenarios where conventional
+                            infrastructure is unavailable or insufficient.</p>
+                    </div>
+                    <img src="Images/UAV communication Photo.png" alt="UAV Communication"
+                        style="width: 220px; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
+                    <div>
+                        <h3 style="color:#b49f05; margin-bottom: 8px;">Information Retrieval</h3>
+                        <p style="color:#eee;">Information Retrieval (IR) focuses on designing efficient techniques and
+                            systems to search, extract, and organize relevant information from large-scale and
+                            heterogeneous data sources such as web documents, digital libraries, databases, and
+                            multimedia repositories. With the exponential growth of data in the digital era, IR has
+                            become a fundamental component in enabling fast, accurate, and scalable access to
+                            information across various domains.
+
+                            Traditional IR systems rely on keyword-based matching techniques, such as vector space
+                            models and probabilistic models (e.g., BM25), to retrieve relevant documents based on user
+                            queries. However, modern IR systems go beyond simple keyword matching by incorporating
+                            semantic understanding, context awareness, and user intent modeling. This shift has led to
+                            the development of advanced techniques such as semantic search, knowledge graphs, and neural
+                            information retrieval models.
+
+                            Research in this domain includes several key areas, such as efficient indexing and retrieval
+                            algorithms, ranking and relevance optimization, query expansion and reformulation, and
+                            personalized recommendation systems. Learning-to-rank approaches and deep learning models
+                            are widely used to improve ranking accuracy by capturing complex relationships between
+                            queries and documents. Additionally, Natural Language Processing (NLP) techniques play a
+                            crucial role in understanding user queries, extracting meaningful features, and enhancing
+                            retrieval quality.
+
+                            Recent advancements in IR are driven by the integration of machine learning and deep neural
+                            networks, including transformer-based architectures. These models enable context-aware
+                            retrieval, cross-lingual search, and conversational search systems, making IR more
+                            interactive and user-centric. Applications of IR span across web search engines, e-commerce
+                            platforms, question-answering systems, digital assistants, and enterprise knowledge
+                            management systems.
+
+                            Despite significant progress, several challenges remain, including handling ambiguous
+                            queries, ensuring fairness and bias mitigation, maintaining privacy, and scaling systems for
+                            real-time retrieval over massive datasets. Current research focuses on developing
+                            intelligent, adaptive, and explainable IR systems that can provide highly relevant,
+                            personalized, and trustworthy information to users in diverse and dynamic environments.</p>
+                    </div>
+                    <img src="Images/information retrival.png" alt="Information Retrieval"
+                        style="width: 220px; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
+                    <div>
+                        <h3 style="color:#b49f05; margin-bottom: 8px;">Artificial Intelligence</h3>
+                        <p style="color:#eee;">Artificial Intelligence (AI) has emerged as a transformative technology
+                            that enables machines to learn from data, identify patterns, and make intelligent decisions
+                            with minimal human intervention. With advancements in machine learning,
+                            deep learning, and data analytics, AI is now widely applied across various domains,
+                            including healthcare, communication systems, finance, and smart environments.
+                            Its ability to process large-scale data and extract meaningful insights has
+                            made it a powerful tool for solving complex real-world problems. In the healthcare domain,
+                            AI plays a crucial role in improving diagnosis,
+                            treatment planning, and patient monitoring. By analyzing medical data such
+                            as images, signals, and patient records, AI can assist in early detection of diseases,
+                            prediction of health conditions, and personalized treatment recommendations.
+                            It is also widely used in areas such as medical imaging, drug discovery,
+                            remote patient monitoring, and mental health assessment. The integration
+                            of AI helps in reducing human error, enhancing efficiency, and enabling
+                            proactive healthcare solutions rather than reactive treatments.
+                            Building on these advancements, recent research is increasingly focusing
+                            on leveraging wearable devices for health monitoring and disease prediction.
+                            Modern smartwatches and wearable sensors continuously collect physiological data
+                            such as heart rate, activity levels, sleep patterns, and other vital signals.
+                            By applying AI and machine learning techniques to this data, it becomes possible
+                            to identify patterns related to various health conditions, including emotional
+                            and mental states. In this direction, current work explores the potential
+                            of commercial wearable devices to predict different health-related conditions
+                            using real-world data. By utilizing large-scale datasets and advanced learning models,
+                            this approach aims to enable early detection, continuous monitoring, and more
+                            accessible healthcare solutions, highlighting the growing importance of AI-driven
+                            wearable technologies in modern healthcare systems.
+                        </p>
+                    </div>
+                    <img src="Images/Smart_watch.png" alt="Artificial Intelligence"
+                        style="width: 220px; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
+                    <div>
+                        <h3 style="color:#b49f05; margin-bottom: 8px;">Social Networks</h3>
+                        <p style="color:#eee;">Social Network Analysis (SNA) studies the structure, dynamics, and
+                            behavior of interconnected systems, where entities (nodes) such as individuals,
+                            organizations, or devices are linked through relationships (edges). These networks can
+                            represent online social media platforms, communication systems, biological networks, or
+                            real-world human interactions. By modeling such systems as graphs, SNA provides powerful
+                            tools to analyze how information, influence, and behaviors propagate across networks.
+
+                            A key focus of SNA is understanding network topology and structural properties, including
+                            centrality measures (degree, betweenness, closeness), clustering coefficients, and network
+                            density. These metrics help identify important nodes, influential users, and tightly
+                            connected communities. Community detection algorithms are widely used to uncover hidden
+                            group structures within networks, enabling better understanding of social dynamics and
+                            interaction patterns.
+
+                            Another major research direction is information diffusion and influence propagation, which
+                            studies how ideas, trends, or misinformation spread across a network. Models such as
+                            Independent Cascade and Linear Threshold are commonly used to simulate and analyze diffusion
+                            processes. This is particularly important in applications like viral marketing, rumor
+                            detection, and public awareness campaigns.
+
+                            SNA also plays a critical role in user behavior analysis, where patterns of interaction,
+                            engagement, and activity are examined to understand preferences and predict future actions.
+                            Techniques from machine learning and data mining are integrated to detect anomalies,
+                            identify fake accounts, and combat misinformation or malicious behavior in online platforms.
+
+                            Recent advancements in this field are driven by the integration of graph theory, machine
+                            learning, and deep learning, particularly Graph Neural Networks (GNNs). These models enable
+                            learning complex representations of nodes and edges, improving tasks such as link
+                            prediction, node classification, and recommendation systems. Additionally, temporal and
+                            dynamic network analysis has gained importance, as real-world networks continuously evolve
+                            over time.
+
+                            Despite its wide applicability, SNA faces several challenges, including scalability for
+                            large-scale networks, data sparsity, privacy concerns, and bias in network data. Current
+                            research focuses on developing scalable algorithms, privacy-preserving techniques, and
+                            explainable models to ensure ethical and reliable analysis.
+
+                            Social Network Analysis has diverse applications across domains such as marketing and
+                            advertising, public opinion analysis, recommendation systems, cybersecurity, healthcare
+                            (e.g., epidemic spread modeling), and organizational behavior analysis. Its ability to
+                            uncover hidden patterns and relationships makes it a vital tool in understanding complex
+                            interconnected systems in today’s data-driven world.</p>
+                    </div>
+                    <img src="Images/information and social.png" alt="Social Networks"
+                        style="width: 220px; height: 220px; object-fit: cover; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
+
+                </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

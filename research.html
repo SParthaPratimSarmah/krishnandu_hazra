@@ -210,6 +210,134 @@
             color: gray;
             padding: 12px 0;
         }
+
+        .research-desc,
+        .firstSection p,
+        .firstSection li p,
+        .firstSection div>p {
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            .firstSection,
+            .secondSection,
+            .thirdSection {
+                max-width: 98vw;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .firstSection>div,
+            .secondSection>div,
+            .thirdSection>div {
+                width: 100% !important;
+            }
+
+            .firstSection {
+                margin: 18px 0;
+            }
+
+            .thirdSection {
+                padding-top: 18px;
+            }
+
+            .secondSection .box,
+            .thirdSection .box {
+                width: 98vw;
+                margin: 24px 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 8px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 8px;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            .firstSection {
+                padding: 0 4px;
+            }
+
+            .firstSection>div,
+            .secondSection>div,
+            .thirdSection>div {
+                width: 100% !important;
+            }
+
+            .firstSection .buttons,
+            .buttons {
+                flex-direction: column !important;
+                gap: 10px !important;
+                align-items: stretch;
+            }
+
+            .firstSection img,
+            .secondSection img,
+            .thirdSection img,
+            img {
+                width: 90px !important;
+                height: 90px !important;
+                margin: 0 auto;
+                display: block;
+            }
+
+            [style*="display: grid;"] {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
+
+            .vertical-tittle,
+            .vertical-desc {
+                width: 100% !important;
+                text-align: left;
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 18px 8px;
+                align-items: center;
+            }
+
+            .footer>div {
+                width: 100% !important;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-size: 1.1em !important;
+            }
+
+            .firstSection,
+            .secondSection,
+            .thirdSection {
+                padding: 0 2px;
+            }
+
+            .profile-btn,
+            .btn {
+                padding: 8px 10px !important;
+                font-size: 0.95rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -239,7 +367,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
                     <div>
                         <h3 style="color:#b49f05; margin-bottom: 8px;">UAV Communication and Networks</h3>
-                        <p style="color:#eee;">Unmanned Aerial Vehicles (UAVs) have emerged as a transformative solution
+                        <p class="research-desc" style="color:#eee;">Unmanned Aerial Vehicles (UAVs) have emerged as a transformative solution
                             in modern wireless communication networks due to their high mobility, flexibility, and rapid
                             deployment capabilities. Unlike traditional terrestrial infrastructure, UAVs can be
                             dynamically positioned in three-dimensional space, enabling efficient on-demand connectivity
@@ -280,7 +408,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
                     <div>
                         <h3 style="color:#b49f05; margin-bottom: 8px;">Information Retrieval</h3>
-                        <p style="color:#eee;">Information Retrieval (IR) focuses on designing efficient techniques and
+                        <p class="research-desc" style="color:#eee;">Information Retrieval (IR) focuses on designing efficient techniques and
                             systems to search, extract, and organize relevant information from large-scale and
                             heterogeneous data sources such as web documents, digital libraries, databases, and
                             multimedia repositories. With the exponential growth of data in the digital era, IR has
@@ -321,7 +449,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
                     <div>
                         <h3 style="color:#b49f05; margin-bottom: 8px;">Artificial Intelligence</h3>
-                        <p style="color:#eee;">Artificial Intelligence (AI) has emerged as a transformative technology
+                        <p class="research-desc" style="color:#eee;">Artificial Intelligence (AI) has emerged as a transformative technology
                             that enables machines to learn from data, identify patterns, and make intelligent decisions
                             with minimal human intervention. With advancements in machine learning,
                             deep learning, and data analytics, AI is now widely applied across various domains,
@@ -356,7 +484,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 220px; align-items: center; gap: 32px;">
                     <div>
                         <h3 style="color:#b49f05; margin-bottom: 8px;">Social Networks</h3>
-                        <p style="color:#eee;">Social Network Analysis (SNA) studies the structure, dynamics, and
+                        <p class="research-desc" style="color:#eee;">Social Network Analysis (SNA) studies the structure, dynamics, and
                             behavior of interconnected systems, where entities (nodes) such as individuals,
                             organizations, or devices are linked through relationships (edges). These networks can
                             represent online social media platforms, communication systems, biological networks, or

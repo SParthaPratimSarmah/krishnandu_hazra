@@ -197,6 +197,102 @@
             color: gray;
             padding: 12px 0;
         }
+
+        @media (max-width: 900px) {
+    .firstSection,
+    .secondSection,
+    .thirdSection {
+        max-width: 98vw;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .firstSection > div,
+    .secondSection > div,
+    .thirdSection > div {
+        width: 100% !important;
+    }
+    .firstSection {
+        margin: 18px 0;
+    }
+    .thirdSection {
+        padding-top: 18px;
+    }
+    .secondSection .box,
+    .thirdSection .box {
+        width: 98vw;
+        margin: 24px 0;
+    }
+}
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 8px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 8px;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    .firstSection {
+        padding: 0 4px;
+    }
+    .firstSection > div,
+    .secondSection > div,
+    .thirdSection > div {
+        width: 100% !important;
+    }
+    .firstSection .buttons,
+    .buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: stretch;
+    }
+    .firstSection img,
+    .secondSection img,
+    .thirdSection img,
+    img {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 0 auto;
+        display: block;
+    }
+    [style*="display: grid;"] {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+    }
+    .vertical-tittle, .vertical-desc {
+        width: 100% !important;
+        text-align: left;
+    }
+    .footer {
+        flex-direction: column;
+        padding: 18px 8px;
+        align-items: center;
+    }
+    .footer > div {
+        width: 100% !important;
+        margin-bottom: 12px;
+    }
+}
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+    h1, h2, h3 {
+        font-size: 1.1em !important;
+    }
+    .firstSection, .secondSection, .thirdSection {
+        padding: 0 2px;
+    }
+    .profile-btn, .btn {
+        padding: 8px 10px !important;
+        font-size: 0.95rem !important;
+    }
+}
     </style>
 </head>
 

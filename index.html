@@ -245,6 +245,141 @@
             color: gray;
             padding: 10px 0;
         }
+
+        .leftSection,
+        .vertical-desc,
+        .forthSection ul,
+        .forthSection div,
+        .forthSection li,
+        .forthSection p {
+            text-align: justify;
+        }
+
+        @media (max-width: 900px) {
+            .firstSection,
+            .secondSection,
+            .thirdSection,
+            .forthSection {
+                max-width: 98vw;
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .firstSection>div,
+            .secondSection>div,
+            .thirdSection>div,
+            .forthSection>div {
+                width: 100% !important;
+            }
+
+            .firstSection {
+                margin: 18px 0;
+            }
+
+            .thirdSection {
+                padding-top: 18px;
+            }
+
+            .secondSection .box,
+            .thirdSection .box {
+                width: 98vw;
+                margin: 24px 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 8px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 8px;
+            }
+
+            nav ul li {
+                margin: 8px 0;
+            }
+
+            .firstSection {
+                padding: 0 4px;
+            }
+
+            .firstSection>div,
+            .secondSection>div,
+            .thirdSection>div,
+            .forthSection>div {
+                width: 100% !important;
+            }
+
+            .firstSection .buttons,
+            .buttons {
+                flex-direction: column !important;
+                gap: 10px !important;
+                align-items: stretch;
+            }
+
+            .firstSection img,
+            .secondSection img,
+            .thirdSection img,
+            .forthSection img,
+            img {
+                width: 90px !important;
+                height: 90px !important;
+                margin: 0 auto;
+                display: block;
+            }
+
+            [style*="display: grid;"] {
+                grid-template-columns: 1fr !important;
+                gap: 18px !important;
+            }
+
+            .vertical-tittle,
+            .vertical-desc {
+                width: 100% !important;
+                text-align: left;
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 18px 8px;
+                align-items: center;
+            }
+
+            .footer>div {
+                width: 100% !important;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 15px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-size: 1.1em !important;
+            }
+
+            .firstSection,
+            .secondSection,
+            .thirdSection,
+            .forthSection {
+                padding: 0 2px;
+            }
+
+            .profile-btn,
+            .btn {
+                padding: 8px 10px !important;
+                font-size: 0.95rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -263,18 +398,23 @@
         </nav>
         <nav style="background-color: #fafafa;height: 20px; color: white;">
             <marquee behavior="scroll" direction="left" scrollamount="4">
-                <a href="https://drive.google.com/file/d/1Q__yV7dGK33vbKQ_RI_Jp5S13QnvGfbz/view?usp=sharing"><strong>I am currently looking for internship student for summer-intern.</strong></a> <a href="https://docs.google.com/forms/d/1KchbRypqAFymCOdFCPKVYyJ19GtXxn_esNFP4so6uVY/viewform?edit_requested=true">Apply Now</a>
+                <a href="https://drive.google.com/file/d/1jOaRbYfVR1fawXihAKU7nEYyCR1A95Ih/view?usp=sharing"
+                    style="color:red"><strong>I am currently looking for internship student for
+                        summer-intern.</strong></a> <a
+                    href="https://docs.google.com/forms/d/1KchbRypqAFymCOdFCPKVYyJ19GtXxn_esNFP4so6uVY/viewform?edit_requested=true" style="color: red;">Apply
+                    Now</a>
             </marquee>
 
         </nav>
     </header>
 
     <main>
+        
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is <span class="purple">Dr. Krishnandu Hazra.</span>
                 I am presently working as an Assistent Professor in the Department of Computer Science
-                and Engineering at the <span class="purple">Indian Instiute of Information Technology Guwahati
+                and Engineering at the <span class="purple">Indian Institute of Information Technology Guwahati
                     (IIITG).</span>
                 </span>
                 <span id="element"></span>
@@ -287,15 +427,48 @@
                         target="_blank" rel="noopener noreferrer">Google Scholar</a>
                 </div>
             </div>
-            </div>
-            <div class="rightSection">
+            <div class="rightSection" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
                 <img src="Images/KZ-passport.png" alt="Scientist phot">
+                <div class="news-side-box" style="background: rgba(255,255,255,0.13); border-radius: 12px; padding: 14px 18px; box-shadow: 0 2px 12px rgba(180,159,5,0.13); min-width: 210px; max-width: 260px; margin-top: 8px;">
+                    <h3 style="color:#b49f05; font-size:1.15rem; margin-bottom: 10px; text-align:center;">News</h3>
+                    <ul id="news-list" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <!-- Latest news at the top. Add new <li> items here. -->
+                        <li><a href="#" style="color:#b49f05; text-decoration:none; font-weight:600;">No news yet. Stay tuned for updates!</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
         <hr>
         <section class="secondSection">
             <h1 style="color: #b49f05;">Work Experiences</h1>
             <div class="box">
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/research.png" alt="">
+                    <div class="vertical-tittle">
+                        Junior Research Fellow at
+                    </div>
+                    <div class="vertical-tittle">
+                        (Sept 2015 - Jul 2017)
+                    </div>
+                    <div class="vertical-desc">
+                        NIT Durgapur in the project titled "<span title="purple">Post-Disaster Situation Analysis and
+                            Resource Management Using
+                            Delay-Tolerant Peer-to-Peer Wireless Networks (DISARM)”, sponsored by ITRA, Digital India
+                            Corporation, Government of India.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top_2" src="Images/research.png" alt="">
+                    <div class="vertical-tittle">
+                        PhD Research Scholar
+                    </div>
+                    <div class="vertical-tittle">
+                        (Jul 2017 - Dec 2020)
+                    </div>
+                    <div class="vertical-desc">
+                        MHRD fellowship, NIT Durgapur.
+                    </div>
+                </div>
                 <div class="vertical">
                     <img class="image-top" src="Images/Assistent professor.png" alt="">
                     <div class="vertical-tittle">
@@ -336,44 +509,18 @@
                         Guwahati (IIITG), Assam, India
                     </div>
                 </div>
-                <div class="vertical">
-                    <img class="image-top_2" src="Images/research.png" alt="">
-                    <div class="vertical-tittle">
-                        Junior Research Fellow at
-                    </div>
-                    <div class="vertical-tittle">
-                        (Sept 2015 - Jul 2017)
-                    </div>
-                    <div class="vertical-desc">
-                        NIT Durgapur in the project titled "<span title="purple">Post-Disaster Situation Analysis and
-                            Resource Management Using
-                            Delay-Tolerant Peer-to-Peer Wireless Networks (DISARM)”, sponsored by ITRA, Digital India
-                            Corporation, Government of India.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top_2" src="Images/research.png" alt="">
-                    <div class="vertical-tittle">
-                        PhD Research Scholar
-                    </div>
-                    <div class="vertical-tittle">
-                        (Jul 2017 - Dec 2020)
-                    </div>
-                    <div class="vertical-desc">
-                        MHRD fellowship, NIT Durgapur.
-                    </div>
-                </div>
+
             </div>
         </section>
         <section class="thirdSection">
             <h1 style="color: #b49f05;">Educational Qualification</h1>
             <div class="box">
+
                 <div class="vertical">
                     <img class="image-top_2" src="Images/education.png" alt="">
-                    <div class="vertical-tittle">PhD in CSE</div>
-                    <div class="vertical-tittle">(2017-2022)</div>
-                    <div class="vertical-desc">National Institute of Technology Durgapur, West Bengal, India in the year
-                        2022</div>
+                    <div class="vertical-tittle">B.Tech in CSE</div>
+                    <div class="vertical-tittle">(2009 - 2013)</div>
+                    <div class="vertical-desc">Jalpaiguri Government Engineering College, West Bengal, India</div>
                 </div>
                 <div class="vertical">
                     <img class="image-top_2" src="Images/education.png" alt="">
@@ -383,14 +530,17 @@
                 </div>
                 <div class="vertical">
                     <img class="image-top_2" src="Images/education.png" alt="">
-                    <div class="vertical-tittle">B.Tech in CSE</div>
-                    <div class="vertical-tittle">(2009 - 2013)</div>
-                    <div class="vertical-desc">Jalpaiguri Government Engineering College, West Bengal, India</div>
+                    <div class="vertical-tittle">PhD in CSE</div>
+                    <div class="vertical-tittle">(2017-2022)</div>
+                    <div class="vertical-desc">National Institute of Technology Durgapur, West Bengal, India in the year
+                        2022</div>
                 </div>
+
             </div>
         </section>
         <section class="forthSection" style="max-width: 80vw; margin: 40px auto 0 auto; color: white;">
-            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Sponsered Research Project</h1>
+            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Sponsered Research
+                Project</h1>
             <div
                 style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 24px 32px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 900px; margin: 0 auto 32px auto;">
                 <h2 style="color:#b49f05; font-size:1.3rem; margin-bottom: 10px;">
@@ -406,10 +556,13 @@
                     <li><strong>Current Status:</strong> Ongoing</li>
                 </ul>
             </div>
-            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Research Collaboration</h1>
+            <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Research Collaboration
+            </h1>
             <div
                 style="background: rgba(255,255,255,0.07); border-radius: 16px; padding: 24px 32px; box-shadow: 0 4px 24px rgba(180,159,5,0.08); max-width: 900px; margin: 0 auto 32px auto;">
-                <h2>The University of Alabama in Huntsville</h2>
+                <ul>
+                    <li>The University of Alabama in Huntsville, USA</li>
+                </ul>
             </div>
 
             <h1 style="font-size:2rem; color:#b49f05; margin-bottom: 24px; text-align:center;">Teaching</h1>
@@ -448,7 +601,7 @@
     <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['My research interests are: ', 'UAV Communications, Wireless Networks, Information Retrieval, AI/ML, Affective Computing, Social Networks, NLP, Graph Theory, etc.'],
+            strings: ['My research interests are: UAV Communications, Wireless Networks, Information Retrieval, AI/ML, Affective Computing, Social Networks, NLP, Graph Theory, etc.'],
             typeSpeed: 50,
         });
     </script>
